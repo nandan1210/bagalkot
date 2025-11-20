@@ -30,11 +30,65 @@ int main() {
             case START:
                 if (isdigit(ch)) {
                     state = IN_NUMBER;
+                    index = 0;
                     token[index++] = ch;
                 }
                 else if (isalpha(ch)) {
                     state = IN_IDENTIFIER;
+                    index = 0;
                     token[index++] = ch;
                 }
                 else if (ch == '+') {
                     print_token("PLUS", "+");
+                }
+                else if (ch == '-') {
+                    print_token("MINUS", "-");
+                }
+                else if (ch == '*') {
+                    print_token("MULTIPLY", "*");
+                }
+                else if (ch == '/') {
+                    print_token("DIVIDE", "/");
+                }
+                else if (isspace(ch)) {
+                    // ignore spaces
+                }
+                else if (ch == '\0' || ch == '\n') {
+                    state = DONE;
+                }
+                break;
+
+            case IN_NUMBER:
+                if (isdigit(ch)) {
+                    token[index++] = ch;
+                }
+                else {
+                    token[index] = '\0';
+                    print_token("NUMBER", token);
+                    index = 0;
+                    state = START;
+                    i--; // reprocess this character
+                }
+                break;
+
+            case IN_IDENTIFIER:
+                if (isalnum(ch)) {
+                    token[index++] = ch;
+                }
+                else {
+                    token[index] = '\0';
+                    print_token("IDENTIFIER", token);
+                    index = 0;
+                    state = START;
+                    i--; // reprocess this character
+                }
+                break;
+
+            case DONE:
+                break;
+
+        }
+    }
+
+    return 0;
+}
