@@ -82,4 +82,44 @@ int main() {
         else if (action < 0) {
             int prod = -action;
 
-            if (prod == 1) {       // S
+            if (prod == 1) {       // S → A
+                printf("reduce S → A\n");
+                // pop 1 symbol (A)
+                top--; 
+                int st = stack[top];
+                top++;
+                stack[top] = GOTO_TABLE[st][1]; // goto S
+            }
+            else if (prod == 2) {  // A → aA
+                printf("reduce A → aA\n");
+                // pop 2 symbols (A and 'a')
+                top -= 2;
+                int st = stack[top];
+                top++;
+                stack[top] = GOTO_TABLE[st][0]; // goto A
+            }
+            else if (prod == 3) {  // A → b
+                printf("reduce A → b\n");
+                // pop 1 (b)
+                top--;
+                int st = stack[top];
+                top++;
+                stack[top] = GOTO_TABLE[st][0]; // goto A
+            }
+        }
+
+        // ------------ ACCEPT -------------------
+        else if (action == 999) {
+            printf("ACCEPTED.\n");
+            break;
+        }
+
+        // ------------ ERROR ---------------------
+        else {
+            printf("ERROR.\n");
+            break;
+        }
+    }
+
+    return 0;
+}
