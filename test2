@@ -1,0 +1,180 @@
+1. Which phase comes immediately after lexical analysis?
+A. Code generation
+B. Parsing
+C. Optimization
+D. Semantic analysis
+
+2. What is the main task of a syntax analyser?
+A. Generate tokens
+B. Check grammatical structure
+C. Optimize code
+D. Allocate memory
+
+3. Syntax errors are detected by which phase?
+A. Lexical Analyzer
+B. Syntax Analyzer
+C. Semantic Analyzer
+D. Code Generator
+
+4. Which of the following is NOT a parsing technique?
+A. LL
+B. LR
+C. SLR
+D. DMA
+
+5. A parse tree represents the __________ of a program.
+A. Token stream
+B. Syntax structure
+C. Machine code
+D. Memory
+
+6. Which parsing method is top-down?
+A. LR
+B. LALR
+C. SLR
+D. LL
+
+7. Which parsing method is bottom-up?
+A. LL
+B. LR
+C. Predictive parsing
+D. Recursive descent
+
+8. SDT stands for _________.
+A. Syntax Directed Translation
+B. Syntax Direct Tree
+C. Semantic Data Type
+D. Source Derived Tree
+
+9. SDD stands for _________.
+A. Semantic Directed Definitions
+B. Syntax Directed Definitions
+C. Syntax Data Description
+D. Semantic Data Declaration
+
+10. In SDD, attributes are associated with __________.
+A. Terminals only
+B. Non-terminals only
+C. Grammar symbols
+D. Machine code
+
+11. Inherited attributes are evaluated from _______.
+A. Children to parent
+B. Parent to children
+C. Rightmost token only
+D. Operator table
+
+12. Synthesized attributes are evaluated from ________.
+A. Children to parent
+B. Parent to children
+C. Leftmost token only
+D. All terminals
+
+13. Semantic rules belong to which component?
+A. SLR parsing
+B. SDD
+C. DFA
+D. Symbol table
+
+14. Actions embedded inside productions are called _______.
+A. Tokens
+B. Semantic actions
+C. Tables
+D. Handlers
+
+15. SDT places semantic actions inside _______.
+A. Grammar rules
+B. Symbol table
+C. Linker
+D. Optimizer
+
+16. The SDT action { print("+") } typically generates _______.
+A. Prefix notation
+B. Postfix notation
+C. Syntax tree
+D. Tokens
+
+17. Postfix expression for a + b is _______.
+A. +ab
+B. ab+
+C. a+b
+D. ba+
+
+18. A parse tree’s root is generally the ________.
+A. Terminal
+B. Non-terminal
+C. Start symbol
+D. Token
+
+19. Syntax errors are caught during ________.
+A. Tokenizing
+B. Parsing
+C. Linking
+D. Execution
+
+20. Ambiguity in grammar means ________.
+A. Grammar has no terminals
+B. Grammar gives more than one parse tree
+C. Grammar has no start symbol
+D. Grammar has no productions
+
+21. Left recursion must be removed in _______ parsers.
+A. LR
+B. LALR
+C. LL
+D. CLR
+
+22. FIRST and FOLLOW sets help in building ______.
+A. LR parser
+B. DFA
+C. LL(1) parsing table
+D. TAC code
+
+23. An SDT that prints operator after both operands is used to generate _______.
+A. Infix
+B. Postfix
+C. Prefix
+D. None
+
+24. In syntax analysis, a production rule is of the form ______.
+A. LHS → RHS
+B. RHS → LHS
+C. A = B
+D. op(a,b)
+
+25. Which attributes depend only on child nodes?
+A. Inherited attributes
+B. Synthesized attributes
+C. Both
+D. None
+
+26. In an SDT, an action can appear _______.
+A. Only at end
+B. Only at start
+C. Anywhere in production
+D. Only after terminals
+
+27. Semantic analysis checks _______.
+A. Grammar rules
+B. Meaning of program
+C. Machine code
+D. Hardware
+
+28. Type checking is part of ________.
+A. Syntax analysis
+B. Lexical analysis
+C. Semantic analysis
+D. Optimizer
+
+29. A syntax analyzer uses ________ to detect structure.
+A. Regular expressions
+B. CFG (context-free grammar)
+C. Data flow graphs
+D. Symbol tables
+
+30. AST stands for ________.
+A. Abstract Syntax Tree
+B. Application Syntax Table
+C. Automated Symbol Table
+D. Advanced Syntax Technique
+
